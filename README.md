@@ -23,5 +23,3 @@
 - Docker
 - Kubernetes
 - Travis CI 持续集成
-
-虽然项目逻辑非常的简单，但是我希望在这个项目中不断熟悉和学习Golang。
