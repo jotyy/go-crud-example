@@ -73,12 +73,12 @@ func Login(c *gin.Context) {
 
 func UnRegister(c *gin.Context) {
 	var user model.User
-	username := c.Param("user_name")
+	username := c.Query("user_name")
 
 	if err := model.DB.Model(model.User{}).Where("user_name = ?", username).First(&user).Error; err != nil {
 		c.JSON(200, response.Response{
 			Code: 40001,
-			Msg:  "账号或密码错误",
+			Msg:  "用户不存在",
 		})
 		return
 	}
