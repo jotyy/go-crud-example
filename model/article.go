@@ -6,6 +6,7 @@ type Article struct {
 	gorm.Model
 
 	Title      string `json:"title"`
+	CoverUrl   string `json:"cover_url"`
 	Desc       string `json:"desc"`
 	Content    string `json:"content"`
 	CreatedBy  string `json:"created_by"`

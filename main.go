@@ -18,6 +18,7 @@ func main() {
 
 	router.POST("/register", api.Register)
 	router.POST("/login", api.Login)
+	router.DELETE("/unregister", api.UnRegister)
 
 	v1 := router.Group("/api/v1/")
 	v1.Use(middleware.SetMiddlewareAuthentication())
